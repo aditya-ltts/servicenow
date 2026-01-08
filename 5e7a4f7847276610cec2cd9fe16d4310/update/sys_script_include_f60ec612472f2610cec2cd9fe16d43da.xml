@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_594089_employe_0.getPerformanceData</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>getPerformanceData</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var getPerformanceData = Class.create();
+getPerformanceData.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getPerformance() {
+		var emp = this.getParameter('sysparm_employee');
+		var per = this.getParameter('sysparm_period');
+		gs.info('emp' + emp);
+        var gr = new GlideRecord('x_594089_employe_0_performance_review');
+        gr.addQuery('employee', emp);
+		gr.addQuery('review_period', per);
+        gr.query();
+
+        if (gr.next()) {
+            var result = {
+				period: gr.getValue('review_period'),
+                assigned_task: gr.getValue('assigne_task'),
+                completed_task: gr.getValue('completed_task'),
+                pending_task: gr.getValue('pending_task'),
+                self_review: gr.getValue('self_review')
+            };
+			gs.info('gs.info(JSON.stringify(result));' + JSON.stringify(result));
+            return JSON.stringify(result);
+        }
+        return JSON.stringify({});
+	},
+    type: 'getPerformanceData'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-26 06:40:55</sys_created_on>
+        <sys_id>f60ec612472f2610cec2cd9fe16d43da</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>getPerformanceData</sys_name>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>sys_script_include_f60ec612472f2610cec2cd9fe16d43da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 07:08:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=762000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>onboarding_tshirt</internal_name>
+        <label_cache>[{"name":"2ee78965-e4ac-4f3e-8607-a57b8d892651.record","label":"3 - Create Record➛Onboarding Task Record","reference":"x_594089_employe_0_onboarding_task","reference_display":"Onboarding Task","type":"reference","base_type":"reference","usedInstances":{"19b6ff49-d7bb-4135-978c-132bca45c624":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e3308dea-6552-4f23-843d-e3200150d359.requested_for","label":"2 - Get Catalog Variables➛requested_for","reference":"x_594089_employe_0_hr_employee","reference_display":"Employee","type":"reference","base_type":"reference","usedInstances":{"2ee78965-e4ac-4f3e-8607-a57b8d892651":["employee"],"b188a53c-b649-4e19-a300-1dce90577c14":["ah_to"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"e3308dea-6552-4f23-843d-e3200150d359.requested_for.manager","label":"2 - Get Catalog Variables➛requested_for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_594089_employe_0_hr_employee","column_name":"manager","usedInstances":{"2ee78965-e4ac-4f3e-8607-a57b8d892651":["assigned_to"]}},{"name":"Service Catalog_1.request_item.cat_item.name","label":"Trigger - Service Catalog➛Requested Item Record➛Item➛Name","reference":"","reference_display":"Name","type":"translated_text","base_type":"translated_text","parent_table_name":"sc_cat_item","column_name":"name","usedInstances":{"b1687a9a-d9bb-4d51-8689-64db4d4e5f33":["condition"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"e3308dea-6552-4f23-843d-e3200150d359":["requested_item"]},"attributes":{"default_search_field":"number"}}]</label_cache>
+        <master_snapshot>bde098cb47eb2210cec2cd9fe16d436f</master_snapshot>
+        <master_snapshot_digest/>
+        <name>OnBoarding Tshirt</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>46e098cb47eb2210cec2cd9fe16d43df</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:17:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>662f804b47eb2210cec2cd9fe16d4341</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>OnBoarding Tshirt</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>sys_hub_flow_662f804b47eb2210cec2cd9fe16d4341</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:35</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record display_value="Created 2025-08-28 11:00:31">d112508f47eb2210cec2cd9fe16d437f</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_variable_value action="delete_multiple" query="document_key=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_flow_catalog_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <catalog_item/>
+        <name/>
+        <published_version/>
+        <run_flow_in/>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>46e098cb47eb2210cec2cd9fe16d43df</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:30</sys_updated_on>
+        <trigger_definition/>
+    </sys_flow_catalog_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=662f804b47eb2210cec2cd9fe16d4341^sys_idNOT INe22f804b47eb2210cec2cd9fe16d4342"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>662f804b47eb2210cec2cd9fe16d4341</id>
+        <name>OnBoarding Tshirt</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:17:46</sys_created_on>
+        <sys_id>e22f804b47eb2210cec2cd9fe16d4342</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:17:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e22f804b47eb2210cec2cd9fe16d4342"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=662f804b47eb2210cec2cd9fe16d4341^sys_idNOT IN753f044b47eb2210cec2cd9fe16d4355,ed3fc04b47eb2210cec2cd9fe16d43db"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</model>
+        <model_id>662f804b47eb2210cec2cd9fe16d4341</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_662f804b47eb2210cec2cd9fe16d4341</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:17:59</sys_created_on>
+        <sys_id>753f044b47eb2210cec2cd9fe16d4355</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=753f044b47eb2210cec2cd9fe16d4355"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</model>
+        <model_id>662f804b47eb2210cec2cd9fe16d4341</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_662f804b47eb2210cec2cd9fe16d4341</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:17:59</sys_created_on>
+        <sys_id>ed3fc04b47eb2210cec2cd9fe16d43db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:25:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ed3fc04b47eb2210cec2cd9fe16d43db"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=662f804b47eb2210cec2cd9fe16d4341^sys_idNOT INa53fc04b47eb2210cec2cd9fe16d43d6"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</flow>
+        <generation_source/>
+        <name>Service Catalog</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:17:58</sys_created_on>
+        <sys_id>a53fc04b47eb2210cec2cd9fe16d43d6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:28</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/61TTW/bMAz9K4FOG5CDk6zNktswoECAbgWarpdiMGSJcoTJkifJbr2g/32kPxK3M4YB3U2iyMfHx6eHIzM8A8O27LaysyvjHmc7y+ZM2wjecnPXlICP4uC0AIx3h2sdIts+HJm656aihIyLH7l3lZWYpK5HmIowtZ2dM2bvJChemfiecncFzwmBznswICJItlXcBMDItzC+fdEhaJv3gef5iIByHv5O4GXGG9p+n7OCW8mj8805ybviDorS8AinoPMSPNsukmTOaiK6b8JOdl0tL6i/r2xKDFNNstf9NHiUOiBYc3+OiIM20oNF5ZFCyT0iRMI/vnrS1OIy2SRivdys18tktUoSdZEpoYRYf1wkl4uLDQJOr36SWHzlg/Fk8BTBypFgf6rjgcsba86BAxqsm6rgT0H/QvAPCeUpwDFEP/HpmvZqDEIQi9A60Py71eopr/aDJGSmKawXrqmnzDZIQb7ou33+/wQXbya4JIKddDdl1A7Nwla0Wp4ZqglN6BbuQWBJGr3OcyzEImeqwn6d8kXPfuTSKuC2oCRH0IqH77E/uMfbYZ1X2raU+kfjBDenG4/YOasi6XdkXNYcK8jR0WOP59YV6c+KKtp/MvRK24koIQivy/hJRF3D6dP+BvLQA67rBAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=662f804b47eb2210cec2cd9fe16d4341^sys_idNOT IN11a014cb47eb2210cec2cd9fe16d434d,adaf8c4b47eb2210cec2cd9fe16d438e,d98fc84b47eb2210cec2cd9fe16d4342"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:24:15</sys_created_on>
+        <sys_id>11a014cb47eb2210cec2cd9fe16d434d</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:28</sys_updated_on>
+        <ui_id>b188a53c-b649-4e19-a300-1dce90577c14</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2YXW7bOBDHr0Lo2XZlyZ/Zp26DIAW2LZAYXRRNIVAiZXNLiSpJxfUGucueZU/WoURZVtzIhp1ku4BfgojiDP8z85uh7c93DiPOmTMgE3cUxgM8dn3Pd92JN52G/jR2J+Op24+I03FSnFDYKWkkpHm+xTw3C/AvYSrjePWxXokWjBNJU+fs85eOk2EJxppK5+zuwSu9ymjAcUg5GJ6LKE9oqtHbc/Cxr7DKeoblnGp0VQl8KNgcBc/EHhIwswivjCy349DvmqaEwqEx5op2nASnBGshV+sVSTH5kPJ6YcFSDS5fKyUihjVVSC8ooglmHC2ZXiCMyuN7jvH3XbG/QYLvGVcxhSRERhFLI0ZAkbOxHNicwuu39etoIVhEP2SaibRMtMYhr3IueJ6k78uoTVVojHOuN6qSK/BLMxOm0a1lDjHE1wuxvKrOvWBpkRAbIBcR5usnrLVkYQ5xFoXkFMvaX1BIMj7hJMppkeMEZxlL50EmxS0rHIPMpDfn8NCLuViCvWLztIcjE1MPEo57F7B+Xix/xJKZAN+BGzC+LxIUfMuNpjLE5uFmb1DUHbaqSLJMvwbHt9SGcN+xvPenbViRQY3Phs9nYX5m/KP3pf99tTWMH9FqcW+sWdr7R9E+A8R12Wsl3EhbGWvCJ26T8EfIfnKirdCDkX4ebKGuKihptLEVh+/EeRfE7mgUhqNwOPZrUKZRTMZhPMLjyK/BWMJskgmWX4NiNm2Q3N9G2bbwgTiD8auLIrzO3iorY5h0PCcU/VnJbYvA8h0KAXMoreH2joK7JBFpgaB2fAUDfH2yWazHu15gjZhCCsrVQzOBmBW/YdFBK5GjJFcatml402ibxp0weJGOsaW1q+c/rfv/oqWObZ1h+4zFNXh4EWix0TB3d9T33QmhuDsaDr3uIPb87mTgky71PdftD13iD6c9Sb/lVGlKgljI+3u03WaHOzqsM6+hKum86so9ErBuabGdDdt8qvJpe89v773yA8dW621cG+7p4mhcHIRylrCiuGV/Hgs+aa07dRuljqLn+czTRHEPSZXhmzfb+h5BcXDYNXBi8eVY7Ld+t6OjRq3Dl4FxD02V4e8PaAzbcByecPzVcRy2lz5qFFvl4V800htIzrrXCyY1gr+gkGwTur3hSS7y3arXhmvNP4vjEXBHpyv9V/rgilvLHXvNiSTIaoPQm9x1/ShDRmFXs3SVRFQKoUNIw9fiJblxbspt9JJ1yv2vsnLhJrX29hH+eqM0VNlvrfs+iVyiWVcV6C8Z5yikyPTuLTW/HIjiK5L5rYylyENhrlhKlQKNK9V7EgFXdI4lUe3RXF6hGcVJc892CzdtdmTo33/+m8TsOPeofBw2sS5n7/6o5tUeAK8v2BLfLZ7tpFrohNdzanzkBQvfwfzRaVJt3rDZknhEiiyzsR11y375AXJ9MjRrGAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=11a014cb47eb2210cec2cd9fe16d434d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:19:53</sys_created_on>
+        <sys_id>adaf8c4b47eb2210cec2cd9fe16d438e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:28</sys_updated_on>
+        <ui_id>2ee78965-e4ac-4f3e-8607-a57b8d892651</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bOBD9K4SOWVuRLNtru6cA22Av2wCboJc6EShxZHNLkSpJufEG/u+dIWU3bVqgCAoUReuLMcOZN28+9eYhkSJZJfMcstkyn9dFXhSTLJsspnk1L6p8IgoOME1GieYtoKXnlYIyCKNkx1VPyvtytpxmi2UJbafMHsqsNLoy3AqpN6Xn7i0aC+k6xfevB5+rkwG7iQb1ViphQSerN7ejpOMWg3iwyerhsye/76BUvAKFODdEiL2KhL41mU+cv5IcRflcZ6wgQtkogXsPWgDGa7hyMEpargX3xu6Tlbc9KixwcaXV/mSxldojYEK2907+j+iLjOwawNRqiG8nsRwKFtX11sgarjovjY6aQGx4NKpv9auYBJUaGt4rfyw1anqHeNARZSIxMGqut+b9v8eAl1KH7IZHZWquThL33sqq9+CoH6CgRaCy5V1HLe6s2cngjFzadKNQSBtl3mNQJzc65TURT7FCPL1E/V9B/ZpbSVn8gzDofAjZl+96ihvzGBiXMWk0cLWVnb9AuB0M5A6j4xQLyJZfbXxefWx0GFz3aIK5Iz4gSm/WfZYV4uEBiiJbCODj+Ww2GU+bSTFeTAsxBoLOZ5koZsvUwjsE8ujYGJviDPAN2MPhblgEeD4YgtDiUAFDyli+CHbjttJ6Ro/RggY1Pm3tnfPc9y6KjRhHXxzTJ/v3C2T8zINCmXAPLFZq9M2zdQS4lKCE+8KwHS/KEKDcDQGGq5J/r6uSz7Pw+zG3JfL8yU7Loyv/5MjEhKKOGD7aHBK/cJE+WifnZ2t9dnZR1+AcI3rnF4EvI76sd/T981tgjSiDxlT/Qe1Tdh0AWNs7zyz43mrGWRiYlBHiFc0M031b4Z90zDSNA8+qPfsjZ1Kzl9Yay/7G8VEU4hpilQKZHZcqfDVNaLljwzSwvkNinUWq5LNO0nXCeIMrc6RH7nDPcX5hhWwsc1tjPVa8ZnEBj4YptnSDhyGte4sT4NNg+Hi1XxDWkNkJhZTna439cXwH4jRk1JOw5k8L/ml3ftf7OfUe1AQ5+ZP2AulE4WknDofbD1mtYzg2CgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=adaf8c4b47eb2210cec2cd9fe16d438e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:19:19</sys_created_on>
+        <sys_id>d98fc84b47eb2210cec2cd9fe16d4342</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:28</sys_updated_on>
+        <ui_id>e3308dea-6552-4f23-843d-e3200150d359</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VV227iMBD9FZRnhHJhScvbXlRpH3YrlaovVWX5MgFrnUttB8oi/n3HiQMUCkVVK63Ux4xnPOccz5zcrwIpgnHAspDRhDKeRGGUhGF8MYzYKGFRLBIKQIN+UNAcMFPDYw3GgiDSQo7xOVW1O1itJqDnkkPvO7VUlVMSDXxyk7peY7KQplJ0eedrMMJnUgkNRTC+f+gHFdXYxoIOxqu9I7usgCjKQGHhDWSAJxzwhnMJdLWTmuXSIoPeTQvvBDnXtIlv25VaOHhhP4AnC4UAbJ9RZaAf5LQQ1JZ6GYytrjGggYrrQi03GTNZ2JZ3Tp+M/IuXJ3F/5/5xYDhBGB2AzQnx0jXkPcrezzaJz0rU/bqysiza2y1lqhO4VHVe/G4JuieAjNbK7jxBbfB2qBwXh85DzSazcrHR+UoWDW1/qEpO1eaLWqslqy0Y92ygIMeLSE6rShZTUulyLptixJIPpgo/BpkqF9jUyGkxoNwBH6B0dHCF8R9N+I5q6Vj8wmuwGIVHIYnQZVV5ck7jYN1oRB5rh6fl55mQVgxMMFzLyn7FNnPwoNf9bvLZqcHJou1woNb4ABYI9/O9twAsGoksBTFMR+kojkIOPObiMgOMD5OL8HD8b81MavuOS/A6l6721pPplrUZJdPDAe51wvcmYM3r9I+vSPRhK2KJWZpnQAzBi8ncQyemhf7S9rxO+HOskzToM3mJD9qwI7sCN5uFe4OQUUqq+WwbnGE/ouvCyhxIM/tEFqSszFzC4r22Mj09yel2LLsh6J7e7GxkOhKCJXE0TOkLG8n52E0OQnd6kQIWfTEMM8ZGRwqG6UFB9CXN0pQeKYjZQcFlGobY5Bik5KCA01E45McKRLRfcOgyn1SFt3nqRNVm1vtW8z9gO1s9Yxi78s5c7nam8cSgeu80rinrenr3jE+7p4+cY59RHIbhcwc94o3/nfmhSWX400EZtrrh+0IjStCUYNOPssizrA6HpOCqxswcpZAau2yguv/JJs1JswMCNFnottMmpdJYo+fu/6WA24Zk58Vlrbn3aozuz/tbDffhHx/kZEwCDAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d98fc84b47eb2210cec2cd9fe16d4342"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=662f804b47eb2210cec2cd9fe16d4341^sys_idNOT INb14f044b47eb2210cec2cd9fe16d43e6"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6de098cb47eb2210cec2cd9fe16d4332</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:18:16</sys_created_on>
+        <sys_id>b14f044b47eb2210cec2cd9fe16d43e6</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:28</sys_updated_on>
+        <ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTWsbMRD9K0HnZdF+2K1zCykBQ9pAbXJpw6KVZm1RrbSRtHZc4//e0X7YIdi0tDn2tnqjmXlvNI/dE9P6pvVuaW6ckytNrr89RUTqgOH3nlTKbO/NSvK5dp5pDoudmwtyTcokr2iel/kHKNM0oRx4ysWsgmQq8gymJCKa1YA3udFCeml00QER2TDVhsDSraX1CAjpGsV2j29xvpZKWBhYNcxivgdLrvdvQn7XQKFYCQrTF95KvcJ0GXhWlFXJjCc8S6dZSmn6MU/KaVYmqcgYsAzvjYm3I9Gr+w65rCD0Q9yNnYwVgVZCIwIvHrQAbF0x5SAiNdOCeWN3R8QCEw9anYC11B7LkXD5xcmfWDudTMLFClAjhz54PBbDwHqYr43k8NAEgj3iWamGHG5UW+svvY4waqhYq/w4akRah/WgCaQDi4FStVib7dex4Z3UncAhqAxn6nhiHsdQth5ceBhQUGOhomZNg8MpGms2sktGLnW8UniIw1Zh07BxMeOBeIwzYvEd4p86+JFZGVR8xjKY3NMsmZO86LYTy3mLEg7dWIrnNhDqBQ5Sin4aeMFxKxt/g302MLA+RO+72q+2er9fgN3gi1zdoiRlVkUSW3huwflCeqhjzoaPUORw+N5SmolLXvjHau/hoBmbVJOETs47KJ+ec9D5EV2wTfob24SH/kPXUEr/2+a1baQr+vUftHXN/9o1T2HN+w6u3xsBXDoksgzYfPxvhMAOFyB46wRtjf0RJJywwy8qaDlJgQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_662f804b47eb2210cec2cd9fe16d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:17:59</sys_created_on>
+        <sys_id>b93f044b47eb2210cec2cd9fe16d4382</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:17:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_662f804b47eb2210cec2cd9fe16d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:17:59</sys_created_on>
+        <sys_id>f53f044b47eb2210cec2cd9fe16d4352</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:17:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_662f804b47eb2210cec2cd9fe16d4341"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>onboarding_tshirt</internal_name>
+        <label_cache>[{"name":"2ee78965-e4ac-4f3e-8607-a57b8d892651.record","label":"3 - Create Record➛Onboarding Task Record","reference":"x_594089_employe_0_onboarding_task","reference_display":"Onboarding Task","type":"reference","base_type":"reference","usedInstances":{"19b6ff49-d7bb-4135-978c-132bca45c624":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e3308dea-6552-4f23-843d-e3200150d359.requested_for","label":"2 - Get Catalog Variables➛requested_for","reference":"x_594089_employe_0_hr_employee","reference_display":"Employee","type":"reference","base_type":"reference","usedInstances":{"2ee78965-e4ac-4f3e-8607-a57b8d892651":["employee"],"b188a53c-b649-4e19-a300-1dce90577c14":["ah_to"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"e3308dea-6552-4f23-843d-e3200150d359.requested_for.manager","label":"2 - Get Catalog Variables➛requested_for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_594089_employe_0_hr_employee","column_name":"manager","usedInstances":{"2ee78965-e4ac-4f3e-8607-a57b8d892651":["assigned_to"]}},{"name":"Service Catalog_1.request_item.cat_item.name","label":"Trigger - Service Catalog➛Requested Item Record➛Item➛Name","reference":"","reference_display":"Name","type":"translated_text","base_type":"translated_text","parent_table_name":"sc_cat_item","column_name":"name","usedInstances":{"b1687a9a-d9bb-4d51-8689-64db4d4e5f33":["condition"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"e3308dea-6552-4f23-843d-e3200150d359":["requested_item"]},"attributes":{"default_search_field":"number"}}]</label_cache>
+        <master>true</master>
+        <name>OnBoarding Tshirt</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="OnBoarding Tshirt">662f804b47eb2210cec2cd9fe16d4341</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bde098cb47eb2210cec2cd9fe16d436f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:30</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=bde098cb47eb2210cec2cd9fe16d436f^sys_idNOT INf9e098cb47eb2210cec2cd9fe16d4370"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>bde098cb47eb2210cec2cd9fe16d436f</id>
+        <name>OnBoarding Tshirt</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:21</sys_created_on>
+        <sys_id>f9e098cb47eb2210cec2cd9fe16d4370</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:25:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f9e098cb47eb2210cec2cd9fe16d4370"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=bde098cb47eb2210cec2cd9fe16d436f^sys_idNOT IN71e098cb47eb2210cec2cd9fe16d437e,f9e098cb47eb2210cec2cd9fe16d4390"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="OnBoarding Tshirt">bde098cb47eb2210cec2cd9fe16d436f</model>
+        <model_id>bde098cb47eb2210cec2cd9fe16d436f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bde098cb47eb2210cec2cd9fe16d436f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:21</sys_created_on>
+        <sys_id>71e098cb47eb2210cec2cd9fe16d437e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=71e098cb47eb2210cec2cd9fe16d437e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="OnBoarding Tshirt">bde098cb47eb2210cec2cd9fe16d436f</model>
+        <model_id>bde098cb47eb2210cec2cd9fe16d436f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bde098cb47eb2210cec2cd9fe16d436f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>f9e098cb47eb2210cec2cd9fe16d4390</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f9e098cb47eb2210cec2cd9fe16d4390"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=bde098cb47eb2210cec2cd9fe16d436f^sys_idNOT IN31e098cb47eb2210cec2cd9fe16d43ae"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">bde098cb47eb2210cec2cd9fe16d436f</flow>
+        <generation_source/>
+        <name>Service Catalog</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>31e098cb47eb2210cec2cd9fe16d43ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:29</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/61TTW/bMAz9K4FOG5CDk6zNktswoECAbgWarpdiMGSJcoTJkifJbr2g/32kPxK3M4YB3U2iyMfHx6eHIzM8A8O27LaysyvjHmc7y+ZM2wjecnPXlICP4uC0AIx3h2sdIts+HJm656aihIyLH7l3lZWYpK5HmIowtZ2dM2bvJChemfiecncFzwmBznswICJItlXcBMDItzC+fdEhaJv3gef5iIByHv5O4GXGG9p+n7OCW8mj8805ybviDorS8AinoPMSPNsukmTOaiK6b8JOdl0tL6i/r2xKDFNNstf9NHiUOiBYc3+OiIM20oNF5ZFCyT0iRMI/vnrS1OIy2SRivdys18tktUoSdZEpoYRYf1wkl4uLDQJOr36SWHzlg/Fk8BTBypFgf6rjgcsba86BAxqsm6rgT0H/QvAPCeUpwDFEP/HpmvZqDEIQi9A60Py71eopr/aDJGSmKawXrqmnzDZIQb7ou33+/wQXbya4JIKddDdl1A7Nwla0Wp4ZqglN6BbuQWBJGr3OcyzEImeqwn6d8kXPfuTSKuC2oCRH0IqH77E/uMfbYZ1X2raU+kfjBDenG4/YOasi6XdkXNYcK8jR0WOP59YV6c+KKtp/MvRK24koIQivy/hJRF3D6dP+BvLQA67rBAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=bde098cb47eb2210cec2cd9fe16d436f^sys_idNOT IN31e098cb47eb2210cec2cd9fe16d43ab,75e098cb47eb2210cec2cd9fe16d43ad,f1e098cb47eb2210cec2cd9fe16d43aa"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">bde098cb47eb2210cec2cd9fe16d436f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>31e098cb47eb2210cec2cd9fe16d43ab</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:25:22</sys_updated_on>
+        <ui_id>2ee78965-e4ac-4f3e-8607-a57b8d892651</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bOBD9KwSPqa1Ilu213VPQNtjDbgNsglziVqDEkc2WIlWScuMa/u87JGXHbVJ0t+ilaH0xOF98b/hmdLejgtMFnWaQTubZtMqzPB+l6Wg2zsppXmYjnjOAMR1QxRrASMdKCUU4DOiGyc4b74vJfJzO5gU0rdRbKNJCq1Izw4VaFY7Z9xjMhW0l2972OVfHAHITA6q1kNyAoou7NwPaMoOXODB0sfvC9V8hS1aCxNAbj/krFNy2fdL212kueR0d2nCPJx1QuHegOCCQmkkLA9owxZnTZksXznRoMMD4lZLbY8RaKIcFqY+9t+ITXjtLfVwNyKyC6Dsei75f0Vy/ZI5dY+XKdaYPrdZaVGBjTzjUrJPuxaktBly1TmgVUwLNPlvLrlGvY0voscDhedDSWQQBrefpkfc06uu1/vjPAeWlUKElvVPqisnjiTlnRNk5j2dHQUKDhYqGta2XRWv0RoRkxNIkK4mHpJb6I15qxUolrPLAE2wrSy7R/jKYb5kRnsXfWAaT9wNqt/aFZNY+cMEmFh86jyQy6zkUsQ0+pTKidRd4wQZ6uPvBYRY4pPOvCisrH4QU5G9P5gBBIELghdPLLk1zvttBnqczDmw4nUxGw3E9yoezcc6H4Etnk5Tnk3li4AMWcphYa5OglNgKzH7/th8n+P5iWMSPn29poIwNjcVu7FoYR7wzRnjRR9favLWOuc7GY82HMRfV/miKfwHG/3MtfVs9h7V0KUBy+4ScDjvJN4M5KKK8vthLvZPc9s5+N2U/ajdl0zT8fqINFcn99Avq5Fv0aFVFitHmMZ/Mnz8+sdceoun52VKdnV1U2H5LPODzi8CAeAaks/5b7NZAal4Eiy7fQeUSch0KkKazjhjA51WEkSDKhPiKV156RHVNiX/CEl3XFhwpt+RZRoQir4zRhvyJKpT+imuIfQtgNkzI8InVQQSW9KIiXYvAWoNQfc6SJktKWI2Dd4Dn0+Ge4RjAAtEYYtfaOHyDisQxPgQm+MgrXC9J1RnUhEtC4OmCeO5r9cyOVbzxfKnwfSzbAD/Kzr9JWBaPG/756/zu9/f0uzf7kqM//FwgnHh4/BL7/Zt/AQaKRIXCCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=31e098cb47eb2210cec2cd9fe16d43ab"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">bde098cb47eb2210cec2cd9fe16d436f</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>75e098cb47eb2210cec2cd9fe16d43ad</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:30</sys_updated_on>
+        <ui_id>b188a53c-b649-4e19-a300-1dce90577c14</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Y227bOBD9FULPtitLvmafugmCFEhbIDa6KJrCoETK5pYSVZKK6w3yL/st+2UdSrQudtaxEy+aYPNiWMMZ8szwnBnZX24dRpwTp0dG7iCIenjo+p7vuiNvPA78ceSOhmO3GxKn5SQ4puApaSikeb7BPDMG+EqYSjlefaos4YJxImninHz52nJSLCFYU+mc3G4s7Xs6xwHl4DrFck41ulqj2ESlV6l5JiLMYproGVsbL+0GZ3YFvTuDFQgyqNyWQ39omhAKcCLMFW05MU4I1kKuSoukmHxMeGVYsETDlm+VEiHDmiqkFxTRGDOOlkwvEEYFsI5j9vuh2F8AzvfMVhGFGoQGK0tCRgCRUzPPbElh+V21HJ1hjSdaZqHOZFlpwUKqimoSGuGM69O6rXD4mGomkiJE44CvowXP4uRDUUSn3KB2k5kCMDQ1tTHJwuGQeDRZiOXVGuw5S/Iq2qpwEWJePkUTimW4OGeUm6tOsjgA35aDtZYsyLSBCaTg4FWdM8uhmrPAk3KaX2WM05Ql81kqxQ3LDwT4cWfO4aETcbGEeMXmSQeHJtcO3B7unIP9LDd/wpKZxN/DNhB813LUSp1yrFSVPtR/9j0z6ItiNOGY6FlOOBMcSpbqt3DUDbXJ3rWsmrrjXXwmvYq3tT2Pqqg9EFSKMmy4H5FV05btsh6LPhQLVkvdA7VUMMpKaQr60YXEC+UgbeGV8hm5Tfn8i2yeh1xKEeytl6Yu/hvuA0nUrCCwzS0//BGaeEgJ7mAQBIOgP/QrHo7DiAyDaICHoV/xbgn9U8ZYfpvl/bMmh+62HmxnOEwTe2BZawJ6Ls8IRX+sQe3CaUUSCAFNLNlUCCB9c55Xt1SI96RpU1ATaYHgMvkKZkwJyRirCaQXWCOmkILb6qCpQMxmVYtooZXIUJwpDW4aVhria4yt3vPVnaWDtZ7dy5UXIczjC7C/exDgith4MdOiJrvbW+r77ohQ3B70+167F3l+e9TzSZv6nut2+y7x++OOpN8zqjQls0jIuzu0LdbHb3SYvvdItZx5YjtvK2MFt5zMN1Q8WRutgv3dCi5G2paAayPMfb5ieilaMcA5i1lOiELlx5cP2ckp6jZoFIbHfYnb4/A1oU9Pt5EcQuje40bSK6NfHKO7O39r00GDR8GxKb3H6WtK/77B6eBgUvdfSf0/IXV/N63CBpFUFvxJQ10j9rQ9WTCpEXwCZrLN822HA19NHsa3pv2kRHcf4kPoP3h9Sfnl7D8+1fFOKkVes2cKsqrx/DpzXT9MkcHc1ixZxSGVQugACvMtXyTXznXhRi9Yq/B/kxaG68TG20f49AZJoNLfdvp9FplE07bKBbRknKOAItMTbqj5e0fkv0DNv6UsQR4KMsUSqhRgXKnOUQBc0TmWRO3O5uIKTSmOmz7bjaAZ80CF/vn71xTmgXOfVI/D+t4eZC3HfUHVLe7ajrfQMd/odxfT95dVtxs+cdjDT1N/8Nrvnjzt0yXxiBRpanM78sT/+hOsv0LeshoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=75e098cb47eb2210cec2cd9fe16d43ad"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">bde098cb47eb2210cec2cd9fe16d436f</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>f1e098cb47eb2210cec2cd9fe16d43aa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:25:22</sys_updated_on>
+        <ui_id>e3308dea-6552-4f23-843d-e3200150d359</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VV227bOBD9FYPPgqGL12r91qYIsEC7AeoiL0VB8DKKiaUuISm7XiP/vkOJshW7dhKgKdDdRw9nNGfOzDn+uiNKkgXhRcxZxrjIkjjJ4jh9M0v4PONJKjMGwEhEKlYCZhq4b8E6kFQ5KDG+Zrr1D7vdEsxaCZhcMcd0fUeTaUjuUh8eMFkq22i2vQ01GBErpaWBiiy+fotIwwy2cWDIYnf09FycmnHQmLpseakcAp187lFcmMFtmz5eAPYTEEIfw6c+j+K1kR5dHBH47qCSgLAKpi1EpGSVZK42W7JwpsWAASZvKr3dZ6xU5fqxS/bdqn+waZZGo74LYgVFeAOw/QsNzHVoAvrJn31S8QEJX2JL4Vqzp7XGVdieOgkFa7W7Gsf6hJvGqbrqSxzjeqiudVtWf/Vskf0HRmtrLUKCxhPgRwrzFctVvdmzda2qjqvwqGvB9CgVmBGrawXaL7ZqS465EWHOGcVb53HuCGgosQEtWdOo6o42pl6r7qOIsZzeafwxLXS9QTBW3VVTJvxAU9wDm15j/EMXvmVG+ek+4We6LjVuhUpTN00Y2i+MPETEbu2VZtYeZscV0PvWI++ZCDPTnjZfIoxq3DtsvIYw3kM06IpfutciOdwkrhL364CKoJ4jefFkLosc5Cyf5/M0iQWIVMi3BWB8lr2JT8X1xa6UcS+X2NOQB4l9CZgHxXcHaScog8nA+GQJzj495csFmLyaAB3FI3gE0FL8MF2HkajtR/qRNp8m4j8hVt/rV0lVWTTEssab6Wam4111qkUF4iC4FQ/xEFxhP2rayqkSaKciqipaN3atYPN6is8vyyc/aGG4sOGu7Ejt+VxKnqXJLGc/ULsQC3+WOIxnkFawieQsLjifnymY5ScFyR95kefsTEHKTwre5nGMTc5Byk4KBJvHM3GuQCbHBacO9j9l4WV+/YyDG/x6cKfb0cVdOMZgyla3dsVb8Te4I1te+pfJ++EpOHN62ZlD5DnWnKRxHD925zO++7sa62MLRasr8N8RuTvsAW8COiZJV4JNX8ton2WYeHSV0C1mlkiFMthlD9X/we3TPDUjEGDoxvSd9imNwRqz9n+oGoTrhhwcvW6NCI6P0WON/Dzb/vYvyTy0UAINAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f1e098cb47eb2210cec2cd9fe16d43aa"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=bde098cb47eb2210cec2cd9fe16d436f^sys_idNOT IN39e098cb47eb2210cec2cd9fe16d43a8"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6de098cb47eb2210cec2cd9fe16d4332</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OnBoarding Tshirt">bde098cb47eb2210cec2cd9fe16d436f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>39e098cb47eb2210cec2cd9fe16d43a8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:30</sys_updated_on>
+        <ui_id>b1687a9a-d9bb-4d51-8689-64db4d4e5f33</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXU/bMBT9K8jPUZSvdoM3VISExIa0Il42FN3YN601xw62U+iq/vddJ2mLUBFD8Li3+Pje63OOfZQNM51vO+9uzblzcqHZ2c/7iEkdMPresFqZx2uzkPxKOw+a43ztrgQ7Y1Va1ElRVMUXrLIsTTjyjIvTGtOpKHKcsohpaJAqudFCeml02QMRW4HqwsatW0rrCRDStQrWdy9xvpRKWBxZtWCp36NlZ5sXWzIwqhOo01Oe8jyb5lmSZF+LtJrmVZqJHBByGqigQkWlsx2lk+seeZ2rX7cBd95KvRjX1+OU+Q40VgRWaRIxfPKoBRKfGpTDiDWgBXhj13vEIogbrQ7AUmpP41gofnLyDx2YTSahsEaSyHHY3C/L0a8Bri/AA1HpuO/sWMqXRnJ0gzkCa+iUnz3HhoKbNkgdWjxUatdtVNfo74MjbD9gdz2EdI5IYBuUBuqjjnq+NI8/diwvpe5dGTeV4aD2K/DkXdX5wGfDUGFDg8oG2pYcLVtrVrJvJi5NvFC0iMNLpEPDK42BB+IxGQvxJeEXPXwHVgYV32gMNQ80K3CSl/2LpnFkE7JtxNzazRQ4dxBJ7pYPXaA4SB7FlYM/oYVb2fpzOnmFo45t9LkBeZaNzWaOdkV3dDIjkcosyjS2+NCh86X02MQcxo8wZLv91SVJLl5L1AenvS+HpzCpJ2kyOZ7DYnosh8fNeE/4sjfCF27+H7OXJMn/8H04fNKVQ2RGbf3hn5i9+xCW4cy911w6onYbsKvdPyxsrOlxhYQeoEdjfwdRB2z7FwJcuBwNBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bde098cb47eb2210cec2cd9fe16d436f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>b1e098cb47eb2210cec2cd9fe16d438e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:25:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bde098cb47eb2210cec2cd9fe16d436f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_id>fde098cb47eb2210cec2cd9fe16d4394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:25:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_bde098cb47eb2210cec2cd9fe16d436f"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>662f804b47eb2210cec2cd9fe16d4341</sys_id>
+        <latest_snapshot>bde098cb47eb2210cec2cd9fe16d436f</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch0-07-15-2025_07-23-2025_1759.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=662f804b47eb2210cec2cd9fe16d4341^sys_idNOT IN8ee098cb47eb2210cec2cd9fe16d43df"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"8ee098cb47eb2210cec2cd9fe16d43df","name":"plan","plan_signature":null}}</plan>
+        <plan_id>662f804b47eb2210cec2cd9fe16d4341</plan_id>
+        <snapshot>bde098cb47eb2210cec2cd9fe16d436f</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 05:25:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8ee098cb47eb2210cec2cd9fe16d43df</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 05:30:30</sys_updated_on>
+        <trigger display_value="">46e098cb47eb2210cec2cd9fe16d43df</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=662f804b47eb2210cec2cd9fe16d4341"/>
+</record_update>

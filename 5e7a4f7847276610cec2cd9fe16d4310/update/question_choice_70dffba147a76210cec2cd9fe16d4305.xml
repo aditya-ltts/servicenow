@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Quantity">157f77a147a76210cec2cd9fe16d432b</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-24 06:58:32</sys_created_on>
+        <sys_id>70dffba147a76210cec2cd9fe16d4305</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>question_choice_70dffba147a76210cec2cd9fe16d4305</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-24 06:58:32</sys_updated_on>
+        <text>2</text>
+        <value>2</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=70dffba147a76210cec2cd9fe16d4305"/>
+</record_update>

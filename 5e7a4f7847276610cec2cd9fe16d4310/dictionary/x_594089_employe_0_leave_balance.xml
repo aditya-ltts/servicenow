@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="8accad2547ab2210cec2cd9fe16d432f" label="Leave Balance" max_length="40" name="x_594089_employe_0_leave_balance" type="collection">
+        <element label="Employee" max_length="32" name="employee" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <element label="Available Balance" max_length="40" name="available_balance" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

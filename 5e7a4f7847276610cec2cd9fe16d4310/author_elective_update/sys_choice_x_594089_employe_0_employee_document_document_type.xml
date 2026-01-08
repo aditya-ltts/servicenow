@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="document_type" table="x_594089_employe_0_employee_document" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>document_type</element>
+            <name>x_594089_employe_0_employee_document</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-23 21:18:19</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>document_type</sys_name>
+            <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+            <sys_update_name>sys_choice_x_594089_employe_0_employee_document_document_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-23 21:18:19</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>document_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Resume</label>
+            <language>en</language>
+            <name>x_594089_employe_0_employee_document</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-23 21:18:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-23 21:18:19</sys_updated_on>
+            <value>resume</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>document_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Offer Letter</label>
+            <language>en</language>
+            <name>x_594089_employe_0_employee_document</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-23 21:18:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-23 21:18:19</sys_updated_on>
+            <value>offer_letter</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>document_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ID Proof</label>
+            <language>en</language>
+            <name>x_594089_employe_0_employee_document</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-23 21:18:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-23 21:18:19</sys_updated_on>
+            <value>id_proof</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>document_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Appraisal</label>
+            <language>en</language>
+            <name>x_594089_employe_0_employee_document</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-23 21:18:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-23 21:18:19</sys_updated_on>
+            <value>appraisal</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

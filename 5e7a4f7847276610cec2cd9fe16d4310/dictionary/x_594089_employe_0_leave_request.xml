@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="128065e1476b2210cec2cd9fe16d43c8" label="Leave Request" max_length="40" name="x_594089_employe_0_leave_request" type="collection">
+        <element label="Approved By" max_length="32" name="approved_by" reference="sys_user" type="reference"/>
+        <element label="Approved" max_length="40" name="approved" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Duration" max_length="40" name="duration" type="integer"/>
+        <element label="Employee" max_length="32" name="employee" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <element label="Applied On" max_length="40" name="applied_on" type="glide_date"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <element label="Comments" max_length="40" name="comments" type="string"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+            </choice>
+        </element>
+        <element label="Reason" max_length="40" name="reason" type="string"/>
+        <element choice="1" label="Leave Type" max_length="40" name="leave_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Paid" sequence="2" value="paid"/>
+                <element inactive_on_update="false" label="Unpaid" sequence="3" value="unpaid"/>
+                <element inactive_on_update="false" label="Casual" sequence="1" value="casual"/>
+                <element inactive_on_update="false" label="Sick" sequence="0" value="sick"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="approved_by"/>
+        </index>
+        <index name="index2">
+            <element name="employee"/>
+        </index>
+        <index name="index3">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

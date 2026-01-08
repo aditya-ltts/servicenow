@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=131000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>monthly_leave_balance_update</internal_name>
+        <label_cache>[{"name":"4065e9c6-89c2-43b5-8b98-ea026ecf092b.Records","label":"1 - Look Up Records➛Leave Balance Records","reference":"x_594089_employe_0_leave_balance","reference_display":"Leave Balance","type":"records","base_type":"records","usedInstances":{"a198d022-593f-440b-a3cd-079492c86297":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a198d022-593f-440b-a3cd-079492c86297.item","label":"2 - For Each➛Leave Balance Record","reference":"x_594089_employe_0_leave_balance","reference_display":"Leave Balance","type":"reference","base_type":"reference","usedInstances":{"4e7cf05a-a29d-420e-aeed-481d145f2031":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a198d022-593f-440b-a3cd-079492c86297.item.available_balance","label":"2 - For Each➛Leave Balance Record➛Available Balance","reference":"","reference_display":"Available Balance","type":"integer","base_type":"integer","parent_table_name":"x_594089_employe_0_leave_balance","column_name":"available_balance","usedInstances":{"4e7cf05a-a29d-420e-aeed-481d145f2031":["available_balance"]}}]</label_cache>
+        <master_snapshot>1a5339c64727e210cec2cd9fe16d4346</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Monthly Leave balance Update</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>9a5339c64727e210cec2cd9fe16d4361</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 09:59:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0ed2f1864727e210cec2cd9fe16d433c</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Monthly Leave balance Update</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>sys_hub_flow_0ed2f1864727e210cec2cd9fe16d433c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:36</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record display_value="Created 2025-08-25 15:31:34">2a5339c64727e210cec2cd9fe16d43a1</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period/>
+        <run_start>2025-08-25 10:01:34</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9a5339c64727e210cec2cd9fe16d4361</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:34</sys_updated_on>
+        <time>1969-12-31 18:35:00</time>
+        <timer_type>4</timer_type>
+        <trigger_definition display_value="Monthly">2ca52504c32222002841b63b12d3ae4a</trigger_definition>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:9a5339c64727e210cec2cd9fe16d4361^sys_idNOT IN5e5339c64727e210cec2cd9fe16d4361"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:9a5339c64727e210cec2cd9fe16d4361</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period/>
+        <run_start>2025-08-25 10:01:34</run_start>
+        <run_time>1969-12-31 18:35:00</run_time>
+        <run_type>monthly</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('9a5339c64727e210cec2cd9fe16d4361');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:34</sys_created_on>
+        <sys_id>5e5339c64727e210cec2cd9fe16d4361</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:34</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">9a5339c64727e210cec2cd9fe16d4361</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0ed2f1864727e210cec2cd9fe16d433c^sys_idNOT INc2d2f1864727e210cec2cd9fe16d433d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0ed2f1864727e210cec2cd9fe16d433c</id>
+        <name>Monthly Leave balance Update</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 09:59:21</sys_created_on>
+        <sys_id>c2d2f1864727e210cec2cd9fe16d433d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 09:59:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c2d2f1864727e210cec2cd9fe16d433d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=0ed2f1864727e210cec2cd9fe16d433c^sys_idNOT INfbd271864727e210cec2cd9fe16d4381"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">0ed2f1864727e210cec2cd9fe16d433c</flow>
+        <generation_source/>
+        <name>Monthly</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 09:59:28</sys_created_on>
+        <sys_id>fbd271864727e210cec2cd9fe16d4381</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:32</sys_updated_on>
+        <trigger_definition display_value="Monthly">2ca52504c32222002841b63b12d3ae4a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1Ty27bMBD8FUNnVaD8SFPdCgQGckgDNEYuQSCsxJVFgCJVinKiBvn3LkVKcR4+tMixhg7eB2dnhsu7p0hCgTLKogsYFrpaXGll6yiOhLJoFMjd0CJVXbhHQ4UGFAerzRBl1vQYR5XRzQ6bVoKlzgpkR0ltOHVnKYujA8geb4bukhMOAShoHCKHIddV3oR5YxelU/pf1kJygyrK7u7jqAVDJ6yDe3pTskQunwRczhSFmwTF6gw2bF2ulvRjbHm+TouzVZEu+QrwHKjvhPSPCdq3RhxJxEeLiiOf5b8zySDwayWHuaMmIO9HA4+d+E3Ya+b6KiR5JfraHOZcdOTw4NNlrUWJ160VWvmMhUKGM6WWfaN+eBEUc6ygl/Y2GEyZviM8bB1lRyIwqm5q/fBzGrgVapQXilKXIOcIrDWi6C127k5QYkNAeQNtK9Q+b40+iPEwcWmSvaQgqaR+oKGd2KsESkc8IYcg2VL+YkzfghFOxRXB+Gv0VufB+Vf38Tx6k//qHSuvMujJvSXUECzbCpRh9brSiNZ+p/GHaVWf45cnsBPk2bvVH/nn1tf+cvtPr3/Am9f+21f2haX0LRjL2CZj7J8fwiTDDSw2fLM8+Qrg+BWEY6/52Q88OFb3OZs/Qv1f/Wn1P2+57/8ArXik8eEFAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>monthly</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0ed2f1864727e210cec2cd9fe16d433c^sys_idNOT IN10f2f5864727e210cec2cd9fe16d4365,6e23f1c64727e210cec2cd9fe16d4333"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">0ed2f1864727e210cec2cd9fe16d433c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 09:59:47</sys_created_on>
+        <sys_id>10f2f5864727e210cec2cd9fe16d4365</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-31 18:35:02</sys_updated_on>
+        <ui_id>4065e9c6-89c2-43b5-8b98-ea026ecf092b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX22rjMBD9leBnE+zm0rRvuy2FhV6gLX0pRYxtORGryF5JzqWh/74jS3ZM4nYTcKFlHzUzks7MnDOWnzceS7xzb5IOgwDC0eQ0CAaDIBiPBzGEUTQYx1EQDSPP9wTMKUZqiDjF5QJ4YdYrMjobBpMzQuc5z9aUBIRTWFASAQcRm9CEqZzD+sntuDbu3s/aHc8YTyQV3vnzi+/lIPEiTaV3vtlxHYqUQ0Q5hj46qDvI9Tqvl6T0Wdt1c1vv1joymRgoge/RlaYioYghBa6o781BJKAzua4tkkJyJ/jWMGNC44meCV4p9or3TgITl1LMKqbWVy+Jq5Q1p5eg4UHLItaFdKHxLGMxVbYeCU2h4PqiabMBd7lmmbBbbNp2d8aLubi15fDqA6rGoKVQCILmJlGD3KWRPsyy5X2F8oqJsibOybMYeL0CrSWLCm3wbDzK6RwPInPIcyamJJfZgpWbEcu8P+W46Kc8W+Klik1FH2IDvI91hf4V2i9L8xNIZrK4wWNwMwJiHBlCbAtVVsiylAsS80KVDglC2bO8N99Ta3XBQalt5lhy8qcwuG0dXMbEFs1siSXL9Q88YkFdcm/+QWIZBVvKxZlImEGhGorZV0THIigRVCK4aEJog+XksGe7bjvAySHsTA6Yx3cSBF7+9fRwPMNtCf5B8/j0Q5KNtnxSmdTE1rJbnh8AoeL5nWFmL1q/h8rRPGWUJ21T/8o4dqb+yf859b8kyRFQQmz3mOBMlJ9wBPpZ7A8+HrFnOzwr6bXlfmkDFe9rAHo6670erYQD4FRKeMC7e48WTwvEat6XlNmd9ZXRCWDQmQAGJ90IYFOnWReypebVq810s4p/NfGwG48UbGwI39oEdtSd4bF3nrztC3hwlIKbZLOey3c41/Hz7h1F+p85Ama41d1HrH7JkiVTqre3V1FJppfAf7f5HeNI1agyvU94Kg4/lO043EoUlUIkVdi85lsxxOfR/gwJfWs+boQcgKUqxw2sevc1mFaEboyg0um07E1zjvyqrY7kww4fjF/2S1o1q1WDVc++xR9Wd0J4+QsKBKZbYhAAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=10f2f5864727e210cec2cd9fe16d4365"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">0ed2f1864727e210cec2cd9fe16d433c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>a198d022-593f-440b-a3cd-079492c86297</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:00:45</sys_created_on>
+        <sys_id>6e23f1c64727e210cec2cd9fe16d4333</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-31 18:35:02</sys_updated_on>
+        <ui_id>4e7cf05a-a29d-420e-aeed-481d145f2031</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVW0/bMBT+K5Wfm8q5tunbRoU0iYEEEy8bik7sE7DkXOY4ha7qf5+dOKECxEDiBS1v5+rvfD5f/HNPBCdrEiGnfuonLPTDMKA0WEV+noS5H/AQEH0yJxWUaDIVslpxY29Bdtax34OfrjgNAi9Ow8KLIpp7EDLu0WUapQFbJUG6XAiN5eFg6rhoGwm7a1duPOxOSK6wIuufN3PSgDInaVRkvX8SeitUCTlKk3o5Yn2KXe8aa/OadSVWOhOj88xVblxk9m1jIqbIwvHpnOCDxoqjAVKAbHFOSqg46FrtyFqrzjgUAr+o5G7KuBOVHgYt4aEVf8zJEbV5BZrJmCNhMjNH0OAuNqDhynRmulMTX7Vg2A6ccCygk/rk2DckXDRa1NVQoiGXY3Utu7I6HxghU4Oj++haAwIbO6dFPoxVXN3V95cjyFNR9ZS4EWXNQE4WaK1E3mkLZ09QYs9xCU0jqtusUfVW9MUGSrm4lcZYFLK+N2e24rZaALO4F4ZVWJwa/6Z3X4MSdojvpo0pPsxJu2tPJLTt4yiGw+x3Z5EMg7kRsp6FnoKs3wRbzJRo9Bdz1BYd8MPciSGPX9swlj4u1FHPR0E8ZHEa0VWaYdnIeocZzSTCFrMcJNj7fqaBMxuefZ3C7xPEG+COgvjRr8HL8J0mnvnOjmtn50PAKSL+MEWsPpMi3BifXhL/EgINXv3VHm1Sv/vtkQhgC0L2q+S2/ldHacj3+4JnWkHVFrUq13HClwn1wfP9KPWiZOl7UNDAi9Ik4mEcsTjKX3o0Prj7+/T2BlZGvZ0KlLx9gaZRbPYXARqzgbYngnPB2bULTs/Qh6nOT2j/fSLt/Tev0c1f3izXVJwJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6e23f1c64727e210cec2cd9fe16d4333"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0ed2f1864727e210cec2cd9fe16d433c^sys_idNOT INc313f9864727e210cec2cd9fe16d4313"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">025339c64727e210cec2cd9fe16d4324</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">0ed2f1864727e210cec2cd9fe16d433c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:00:31</sys_created_on>
+        <sys_id>c313f9864727e210cec2cd9fe16d4313</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:32</sys_updated_on>
+        <ui_id>a198d022-593f-440b-a3cd-079492c86297</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TTW/bMAz9Lzonhj9SI86twFCgh61AW/RSFAYt0YkwWdIkOalr+L+Xip106GnYyeIj+fieKI/M9MH2wT+bW+/lXrPd69uKSR0xOo9MCrZjWSXaKksrXuRlkadpvt1kTVk0WS4KQFGyFdPQIVXKgJ2n8Aiqj/E4btLyBiterrcVz9eborlZb5tqu0ZI8xJ5m1Z5kzwiN074aaJWIb1VMLz8PwM/SCUcLmYsONIW0LHd+C0VBou1ggYVDVoYqP9fPV867xfT3+4gslPorrz0iSrydMXwPaAWSINaUB5XrAMtIBg3sF1wPQEOQTxoNVwrDlIHomOx9t3LD+LO0jQWtkiOOM7Ja1gvFznD/GAkxwcbpNEzEqBRSw83qu/0r1l+XAG20KtwWQEhvSc+tFFzVLFIap8O5vR4GXgn9dnfklSGg7pGEIKTTR/QxzWgwo6I6g6slXpfW2eO8txMWrpkryhIWmVONDQ+ywR4FJ7QFUFyR/iPM/wCTkYXP4mGmqez+/pPH+fOPhbF9WyaCjx30oZbojviIm56i+91ZvLzwxDIpaeBzxG7v/wNMTHQkiX/GzoZ9ztK/cKmT7oO/dNXAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0ed2f1864727e210cec2cd9fe16d433c^sys_idNOT IN1053f5c64727e210cec2cd9fe16d433e,d453f5c64727e210cec2cd9fe16d433e"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0ed2f1864727e210cec2cd9fe16d433c</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>56d7601a-1149-4671-af02-4964d354c54b</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:25</sys_created_on>
+        <sys_id>1053f5c64727e210cec2cd9fe16d433e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:32</sys_updated_on>
+        <transform_compositions>[{"id":"06190ffa23a220103a3339e1d7bf65f9","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"number","label":"Number","order":0,"attributes":{},"value":"1","type":"int","defaultValue":"","typeLabel":null,"mandatory":true,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="add">50980bfa23a220103a3339e1d7bf6510</transform_definition_id>
+        <ui_id>7b30f644-1c2b-417f-ab20-15256f9c4c7f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0ed2f1864727e210cec2cd9fe16d433c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{a198d022-593f-440b-a3cd-079492c86297.item.available_balance}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:25</sys_created_on>
+        <sys_id>d453f5c64727e210cec2cd9fe16d433e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>56d7601a-1149-4671-af02-4964d354c54b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0ed2f1864727e210cec2cd9fe16d433c"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>monthly_leave_balance_update</internal_name>
+        <label_cache>[{"name":"4065e9c6-89c2-43b5-8b98-ea026ecf092b.Records","label":"1 - Look Up Records➛Leave Balance Records","reference":"x_594089_employe_0_leave_balance","reference_display":"Leave Balance","type":"records","base_type":"records","usedInstances":{"a198d022-593f-440b-a3cd-079492c86297":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a198d022-593f-440b-a3cd-079492c86297.item","label":"2 - For Each➛Leave Balance Record","reference":"x_594089_employe_0_leave_balance","reference_display":"Leave Balance","type":"reference","base_type":"reference","usedInstances":{"4e7cf05a-a29d-420e-aeed-481d145f2031":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a198d022-593f-440b-a3cd-079492c86297.item.available_balance","label":"2 - For Each➛Leave Balance Record➛Available Balance","reference":"","reference_display":"Available Balance","type":"integer","base_type":"integer","parent_table_name":"x_594089_employe_0_leave_balance","column_name":"available_balance","usedInstances":{"4e7cf05a-a29d-420e-aeed-481d145f2031":["available_balance"]}}]</label_cache>
+        <master>true</master>
+        <name>Monthly Leave balance Update</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Monthly Leave balance Update">0ed2f1864727e210cec2cd9fe16d433c</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1a5339c64727e210cec2cd9fe16d4346</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_variable_value action="delete_multiple" query="document_key=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=1a5339c64727e210cec2cd9fe16d4346^sys_idNOT IN125339c64727e210cec2cd9fe16d4347"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>1a5339c64727e210cec2cd9fe16d4346</id>
+        <name>Monthly Leave balance Update</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_id>125339c64727e210cec2cd9fe16d4347</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=125339c64727e210cec2cd9fe16d4347"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=1a5339c64727e210cec2cd9fe16d4346^sys_idNOT IN1e5339c64727e210cec2cd9fe16d4350"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">1a5339c64727e210cec2cd9fe16d4346</flow>
+        <generation_source/>
+        <name>Monthly</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_id>1e5339c64727e210cec2cd9fe16d4350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+        <trigger_definition display_value="Monthly">2ca52504c32222002841b63b12d3ae4a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1Ty27bMBD8FUNnVaD8SFPdCgQGckgDNEYuQSCsxJVFgCJVinKiBvn3LkVKcR4+tMixhg7eB2dnhsu7p0hCgTLKogsYFrpaXGll6yiOhLJoFMjd0CJVXbhHQ4UGFAerzRBl1vQYR5XRzQ6bVoKlzgpkR0ltOHVnKYujA8geb4bukhMOAShoHCKHIddV3oR5YxelU/pf1kJygyrK7u7jqAVDJ6yDe3pTskQunwRczhSFmwTF6gw2bF2ulvRjbHm+TouzVZEu+QrwHKjvhPSPCdq3RhxJxEeLiiOf5b8zySDwayWHuaMmIO9HA4+d+E3Ya+b6KiR5JfraHOZcdOTw4NNlrUWJ160VWvmMhUKGM6WWfaN+eBEUc6ygl/Y2GEyZviM8bB1lRyIwqm5q/fBzGrgVapQXilKXIOcIrDWi6C127k5QYkNAeQNtK9Q+b40+iPEwcWmSvaQgqaR+oKGd2KsESkc8IYcg2VL+YkzfghFOxRXB+Gv0VufB+Vf38Tx6k//qHSuvMujJvSXUECzbCpRh9brSiNZ+p/GHaVWf45cnsBPk2bvVH/nn1tf+cvtPr3/Am9f+21f2haX0LRjL2CZj7J8fwiTDDSw2fLM8+Qrg+BWEY6/52Q88OFb3OZs/Qv1f/Wn1P2+57/8ArXik8eEFAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>monthly</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=1a5339c64727e210cec2cd9fe16d4346^sys_idNOT IN525339c64727e210cec2cd9fe16d4350,925339c64727e210cec2cd9fe16d434f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">1a5339c64727e210cec2cd9fe16d4346</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>a198d022-593f-440b-a3cd-079492c86297</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_id>525339c64727e210cec2cd9fe16d4350</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+        <ui_id>4e7cf05a-a29d-420e-aeed-481d145f2031</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVW0/bMBT+K5Wfm8q5tunbRoU0iYEEEy8bik7sE7DkXOY4ha7qf5+dOKECxEDiBS1v5+rvfD5f/HNPBCdrEiGnfuonLPTDMKA0WEV+noS5H/AQEH0yJxWUaDIVslpxY29Bdtax34OfrjgNAi9Ow8KLIpp7EDLu0WUapQFbJUG6XAiN5eFg6rhoGwm7a1duPOxOSK6wIuufN3PSgDInaVRkvX8SeitUCTlKk3o5Yn2KXe8aa/OadSVWOhOj88xVblxk9m1jIqbIwvHpnOCDxoqjAVKAbHFOSqg46FrtyFqrzjgUAr+o5G7KuBOVHgYt4aEVf8zJEbV5BZrJmCNhMjNH0OAuNqDhynRmulMTX7Vg2A6ccCygk/rk2DckXDRa1NVQoiGXY3Utu7I6HxghU4Oj++haAwIbO6dFPoxVXN3V95cjyFNR9ZS4EWXNQE4WaK1E3mkLZ09QYs9xCU0jqtusUfVW9MUGSrm4lcZYFLK+N2e24rZaALO4F4ZVWJwa/6Z3X4MSdojvpo0pPsxJu2tPJLTt4yiGw+x3Z5EMg7kRsp6FnoKs3wRbzJRo9Bdz1BYd8MPciSGPX9swlj4u1FHPR0E8ZHEa0VWaYdnIeocZzSTCFrMcJNj7fqaBMxuefZ3C7xPEG+COgvjRr8HL8J0mnvnOjmtn50PAKSL+MEWsPpMi3BifXhL/EgINXv3VHm1Sv/vtkQhgC0L2q+S2/ldHacj3+4JnWkHVFrUq13HClwn1wfP9KPWiZOl7UNDAi9Ik4mEcsTjKX3o0Prj7+/T2BlZGvZ0KlLx9gaZRbPYXARqzgbYngnPB2bULTs/Qh6nOT2j/fSLt/Tev0c1f3izXVJwJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=525339c64727e210cec2cd9fe16d4350"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">1a5339c64727e210cec2cd9fe16d4346</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_id>925339c64727e210cec2cd9fe16d434f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+        <ui_id>4065e9c6-89c2-43b5-8b98-ea026ecf092b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX22rjMBD9leBnE+zm0rRvuy2FhV6gLX0pRYxtORGryF5JzqWh/74jS3ZM4nYTcKFlHzUzks7MnDOWnzceS7xzb5IOgwDC0eQ0CAaDIBiPBzGEUTQYx1EQDSPP9wTMKUZqiDjF5QJ4YdYrMjobBpMzQuc5z9aUBIRTWFASAQcRm9CEqZzD+sntuDbu3s/aHc8YTyQV3vnzi+/lIPEiTaV3vtlxHYqUQ0Q5hj46qDvI9Tqvl6T0Wdt1c1vv1joymRgoge/RlaYioYghBa6o781BJKAzua4tkkJyJ/jWMGNC44meCV4p9or3TgITl1LMKqbWVy+Jq5Q1p5eg4UHLItaFdKHxLGMxVbYeCU2h4PqiabMBd7lmmbBbbNp2d8aLubi15fDqA6rGoKVQCILmJlGD3KWRPsyy5X2F8oqJsibOybMYeL0CrSWLCm3wbDzK6RwPInPIcyamJJfZgpWbEcu8P+W46Kc8W+Klik1FH2IDvI91hf4V2i9L8xNIZrK4wWNwMwJiHBlCbAtVVsiylAsS80KVDglC2bO8N99Ta3XBQalt5lhy8qcwuG0dXMbEFs1siSXL9Q88YkFdcm/+QWIZBVvKxZlImEGhGorZV0THIigRVCK4aEJog+XksGe7bjvAySHsTA6Yx3cSBF7+9fRwPMNtCf5B8/j0Q5KNtnxSmdTE1rJbnh8AoeL5nWFmL1q/h8rRPGWUJ21T/8o4dqb+yf859b8kyRFQQmz3mOBMlJ9wBPpZ7A8+HrFnOzwr6bXlfmkDFe9rAHo6670erYQD4FRKeMC7e48WTwvEat6XlNmd9ZXRCWDQmQAGJ90IYFOnWReypebVq810s4p/NfGwG48UbGwI39oEdtSd4bF3nrztC3hwlIKbZLOey3c41/Hz7h1F+p85Ama41d1HrH7JkiVTqre3V1FJppfAf7f5HeNI1agyvU94Kg4/lO043EoUlUIkVdi85lsxxOfR/gwJfWs+boQcgKUqxw2sevc1mFaEboyg0um07E1zjvyqrY7kww4fjF/2S1o1q1WDVc++xR9Wd0J4+QsKBKZbYhAAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=925339c64727e210cec2cd9fe16d434f"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=1a5339c64727e210cec2cd9fe16d4346^sys_idNOT IN5e5339c64727e210cec2cd9fe16d434d"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">025339c64727e210cec2cd9fe16d4324</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Monthly Leave balance Update">1a5339c64727e210cec2cd9fe16d4346</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_id>5e5339c64727e210cec2cd9fe16d434d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+        <ui_id>a198d022-593f-440b-a3cd-079492c86297</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TTW+jMBD9Lz4TxEeKQm5Vq0qVdrdSWvWyqqLBHhJrjc3aJimL+O87DoRWPa32BPPm673HMDDT+bbz7sXcOicPmm1/vkVM6oDR+8CkYFuWlqIu06TkeVbkWZJkm3VaFXmVZiIHFAWLmIYGqVJ6bByFJ1BdiIdhnRQ3WPJitSl5tlrn1c1qU5WbFUKSFcjrpMyqeIfcWOHGkVqFdK2C/vX/J/CjVMLiLKYFS9w8WrYdvqT+VZyCChWVPs7qvoj1fRtCO1GYgW9zz25B6RFIZEnE8N2jFkjra1AOI9aAFuCN7dnW244AiyCetOqXiqPUnsaxUPvu5B/amCZJKKyRBHGckku4n32c4PoePDzTaO47O5fyo5Ec3WSFwBo65e8+Y1PBU+ul0VOLh0pdu43qGv1jcoItA66fjZDOEQlsg9BAfdZRPx/NeXdl+SD1xZQ5qQwHtUTgvZVV5wOfgaHChgbtG2hbqQ/71pqTvDQTlyY+KAriWpkzLQ2nHAMPxGPyFeIHwu8v8CtYGVR8pzHUPEbM9e5OgXMfWsjE/e8uMJmUzRr2kw2hhVvZ+ltacMKZ7vgWrn6avXjKpSMKLwF7vP5TIdHTBUn+GTob+yuQ/8DGv5XLDF2dAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=1a5339c64727e210cec2cd9fe16d4346^sys_idNOT IN125339c64727e210cec2cd9fe16d4351,9e5339c64727e210cec2cd9fe16d4350"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>1a5339c64727e210cec2cd9fe16d4346</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{a198d022-593f-440b-a3cd-079492c86297.item.available_balance}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_id>125339c64727e210cec2cd9fe16d4351</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>56d7601a-1149-4671-af02-4964d354c54b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>1a5339c64727e210cec2cd9fe16d4346</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>56d7601a-1149-4671-af02-4964d354c54b</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:33</sys_created_on>
+        <sys_id>9e5339c64727e210cec2cd9fe16d4350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:33</sys_updated_on>
+        <transform_compositions>[{"id":"06190ffa23a220103a3339e1d7bf65f9","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"number","label":"Number","order":0,"attributes":{},"value":"1","type":"int","defaultValue":"","typeLabel":null,"mandatory":true,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="add">50980bfa23a220103a3339e1d7bf6510</transform_definition_id>
+        <ui_id>7b30f644-1c2b-417f-ab20-15256f9c4c7f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_1a5339c64727e210cec2cd9fe16d4346"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0ed2f1864727e210cec2cd9fe16d433c</sys_id>
+        <latest_snapshot>1a5339c64727e210cec2cd9fe16d4346</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch2-09-24-2025_10-12-2025_0904.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0ed2f1864727e210cec2cd9fe16d433c^sys_idNOT IN965339c64727e210cec2cd9fe16d4362"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"965339c64727e210cec2cd9fe16d4362","name":"plan","plan_signature":null}}</plan>
+        <plan_id>0ed2f1864727e210cec2cd9fe16d433c</plan_id>
+        <snapshot>f06be8f747b43a14cec2cd9fe16d4324</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 10:01:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>965339c64727e210cec2cd9fe16d4362</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 10:01:34</sys_updated_on>
+        <trigger display_value="">9a5339c64727e210cec2cd9fe16d4361</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0ed2f1864727e210cec2cd9fe16d433c"/>
+</record_update>
