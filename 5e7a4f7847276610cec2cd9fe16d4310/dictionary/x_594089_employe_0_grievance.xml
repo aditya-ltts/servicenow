@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="25b2f16d47ab2210cec2cd9fe16d4352" label="Grievance" max_length="40" name="x_594089_employe_0_grievance" type="collection">
+        <element choice="3" default="3" label="Priority" max_length="40" name="priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="2" value="1"/>
+                <element inactive_on_update="false" label="Low" sequence="0" value="3"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="Raised By" max_length="32" name="raised_by" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <element label="Raised On" max_length="40" name="raised_on" type="glide_date_time"/>
+        <element label="Description" max_length="400" name="description" type="string"/>
+        <element label="Subject" max_length="240" name="subject" type="string"/>
+        <element choice="3" label="Escalated Level" max_length="40" name="escalated_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="1" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="2" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="3" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Escalated" sequence="3" value="escalated"/>
+                <element inactive_on_update="false" label="Open" sequence="0" value="open"/>
+                <element inactive_on_update="false" label="In Progress" sequence="1" value="in_progress"/>
+                <element inactive_on_update="false" label="Resolved" sequence="2" value="resolved"/>
+            </choice>
+        </element>
+        <element label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index2">
+            <element name="raised_by"/>
+        </index>
+    </element>
+</database>

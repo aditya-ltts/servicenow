@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_594089_employe_0.ReviewDataLoader</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ReviewDataLoader</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ReviewDataLoader = Class.create();
+ReviewDataLoader.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getReview: function() {
+        var emp = this.getParameter('sysparm_employee');
+        var period = this.getParameter('sysparm_period');
+		gs.info('emp' + emp);
+		gs.info('period' + period);
+        var gr = new GlideRecord('x_594089_employe_0_performance_review');
+        gr.addQuery('employee', emp);
+        gr.addQuery('review_period', period);
+        gr.query();
+
+        if (gr.next()) {
+            var result = {
+                assigned_task: gr.getValue('assigne_task'),
+                completed_task: gr.getValue('completed_task'),
+                pending_task: gr.getValue('pending_task'),
+                self_review: gr.getValue('self_review'),
+				manager_review: gr.getValue('manager_review') ? gr.getValue('manager_review') : '',
+				manager_score: gr.getValue('manager_score') ? gr.getValue('manager_score') : ''
+            };
+			gs.info('gs.info(JSON.stringify(result));' + JSON.stringify(result));
+            return JSON.stringify(result);
+        }
+        return JSON.stringify({});
+    },
+    type: 'ReviewDataLoader'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 11:58:41</sys_created_on>
+        <sys_id>addd420e47a7e210cec2cd9fe16d437d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>ReviewDataLoader</sys_name>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>sys_script_include_addd420e47a7e210cec2cd9fe16d437d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 19:14:01</sys_updated_on>
+    </sys_script_include>
+</record_update>

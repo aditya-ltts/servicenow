@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="aa747ded47ab2210cec2cd9fe16d43ed" label="Exit Request" max_length="40" name="x_594089_employe_0_exit_request" type="collection">
+        <element choice="3" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+                <element inactive_on_update="false" label="Initiated" sequence="0" value="initiated"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="in_progress"/>
+            </choice>
+        </element>
+        <element label="Employee" mandatory="true" max_length="32" name="employee" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <element label="Manager Approval" max_length="40" name="manager_approval" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Other Reason" mandatory="true" max_length="400" name="other_reason" type="string"/>
+        <element label="Last Working Day" max_length="40" name="last_working_day" type="glide_date"/>
+        <element choice="1" label="Reason" mandatory="true" max_length="40" name="reason" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Termination" sequence="2" value="termination"/>
+                <element inactive_on_update="false" label="Others" sequence="3" value="others"/>
+                <element inactive_on_update="false" label="Growth" sequence="1" value="growth"/>
+                <element inactive_on_update="false" label="Family" sequence="0" value="family"/>
+            </choice>
+        </element>
+        <element label="Resignation Date" max_length="40" name="resignation_date" type="glide_date"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

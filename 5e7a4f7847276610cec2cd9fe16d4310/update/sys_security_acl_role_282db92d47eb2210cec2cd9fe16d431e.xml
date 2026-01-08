@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-23 21:27:21</sys_created_on>
+        <sys_id>282db92d47eb2210cec2cd9fe16d431e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_594089_employe_0_shift_schedule.x_594089_employe_0.hrms.hr_user</sys_name>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_security_acl display_value="x_594089_employe_0_shift_schedule">282db92d47eb2210cec2cd9fe16d431b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_282db92d47eb2210cec2cd9fe16d431e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-23 21:27:21</sys_updated_on>
+        <sys_user_role display_value="x_594089_employe_0.hrms.hr_user" name="x_594089_employe_0.hrms.hr_user">ee7a4f7847276610cec2cd9fe16d4336</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

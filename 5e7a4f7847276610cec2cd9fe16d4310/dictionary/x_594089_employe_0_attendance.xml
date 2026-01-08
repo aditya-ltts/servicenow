@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e100356947ab2210cec2cd9fe16d4386" label="Attendance" max_length="40" name="x_594089_employe_0_attendance" type="collection">
+        <element label="Out Time" max_length="40" name="out_time" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Login Date" max_length="40" name="login_date" type="glide_date_time"/>
+        <element label="Late Reason" max_length="240" name="late_reason" type="string"/>
+        <element label="Attendance Date" max_length="40" name="attendance_date" type="glide_date"/>
+        <element label="Overtime" max_length="40" name="overtime" type="string"/>
+        <element label="In Time" max_length="40" name="in_time" type="glide_date_time"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Absent" sequence="1" value="absent"/>
+                <element inactive_on_update="false" label="Present" sequence="0" value="present"/>
+                <element inactive_on_update="false" label="Leave" sequence="2" value="leave"/>
+                <element inactive_on_update="false" label="WFH" sequence="3" value="wfh"/>
+                <element inactive_on_update="false" label="Pending" sequence="4" value="pending"/>
+            </choice>
+        </element>
+        <element label="Employee" max_length="32" name="employee" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

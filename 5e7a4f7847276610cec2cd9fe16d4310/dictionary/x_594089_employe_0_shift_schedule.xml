@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d71d392d47eb2210cec2cd9fe16d4315" label="Shift Schedule" max_length="40" name="x_594089_employe_0_shift_schedule" type="collection">
+        <element label="End Time" max_length="40" name="end_time" type="glide_time"/>
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
+        <element label="Start Time" max_length="40" name="start_time" type="glide_time"/>
+        <element label="Employee" max_length="32" name="employee" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <element label="Shift Type" max_length="40" name="shift_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Afternoon" sequence="1" value="afternoon"/>
+                <element inactive_on_update="false" label="Morning" sequence="0" value="morning"/>
+                <element inactive_on_update="false" label="Night" sequence="2" value="night"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

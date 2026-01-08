@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 20px;
+}
+
+.card-col {
+  width: 100%; /* Grid controls the layout */
+}
+
+.card {
+  /* Remove fixed height */
+  /* height: 100%; */
+  padding: 20px;
+  border: 1px solid #edebeb;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-sizing: border-box;
+}
+
+.card-body {
+  /* Remove fixed height */
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Make button fit within card */
+.btn-primary {
+  max-width: 100%; /* prevent overflow */
+  box-sizing: border-box;
+  white-space: normal; /* allow wrapping if button text is long */
+  overflow-wrap: break-word;
+}
+
+
+.card-body h5 {
+  font-size: 1.3em;
+}
+.row:before {
+	content: none;
+}
+
+.card-img-top {
+  width: 40px;      /* fixed width */
+  height: 40px;     /* fixed height */
+  object-fit: contain; /* keep aspect ratio, no stretching */
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px; /* optional spacing */
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>employee_portal_item</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>EMPLOYEE PORTAL ITEM</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    data.items = [];
+    // Get category sys_id for "Employee Portal"
+    var categoryName = "Employee";
+    var categoryGR = new GlideRecord('sc_category');
+    categoryGR.addQuery('title', categoryName);
+    categoryGR.query();
+    if (categoryGR.next()) {
+        var categorySysId = categoryGR.sys_id;
+ 
+        // Fetch all active catalog items in that category
+        var itemGR = new GlideRecord('sc_cat_item');
+        itemGR.addQuery('active', true);
+        itemGR.addQuery('category', categorySysId);
+        itemGR.orderBy('name');
+        itemGR.query();
+ 
+        while (itemGR.next()) {
+            data.items.push({
+                sys_id: itemGR.sys_id.toString(),
+                name: itemGR.name.toString(),
+                short_description: itemGR.short_description.toString(),
+                picture: itemGR.icon.getDisplayValue()
+            });
+        }
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 07:28:03</sys_created_on>
+        <sys_id>3efc600747af2210cec2cd9fe16d430e</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>EMPLOYEE PORTAL ITEM</sys_name>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>sp_widget_3efc600747af2210cec2cd9fe16d430e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 10:24:27</sys_updated_on>
+        <template><![CDATA[<div class="catalog-widget">
+<h1>Employee Portal</h1>
+<div class="row">
+<div class='card-col' ng-repeat="item in c.data.items">
+<div class="card">
+<img ng-if="item.picture" ng-src="{{item.picture}}" alt="{{item.name}}" class="card-img-top">
+<div class="card-body">
+
+<p class="card-text">{{item.short_description}}</p>
+<a href="/sp?id=sc_cat_item&sys_id={{item.sys_id}}" class="btn btn-primary">{{item.name}}</a>
+</div>
+</div>
+</div>
+</div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>3efc600747af2210cec2cd9fe16d430e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-28 07:28:03</sys_created_on>
+        <sys_id>b2fc600747af2210cec2cd9fe16d4311</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 07:28:03</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

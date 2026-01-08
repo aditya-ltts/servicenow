@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5a9bf1a947eb2210cec2cd9fe16d4338" label="Escalation Matrix" max_length="40" name="x_594089_employe_0_escalation_matrix" type="collection">
+        <element label="Level 2" max_length="32" name="level_2" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Department" max_length="32" name="department" reference="cmn_department" type="reference"/>
+        <element label="Level 1" max_length="32" name="level_1" reference="sys_user" type="reference"/>
+        <element label="Level 3" max_length="32" name="level_3" reference="sys_user" type="reference"/>
+        <element label="Grievance" max_length="32" name="grievance" reference="x_594089_employe_0_grievance" type="reference"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+        <index name="index2">
+            <element name="grievance"/>
+        </index>
+        <index name="index3">
+            <element name="level_1"/>
+        </index>
+        <index name="index4">
+            <element name="level_2"/>
+        </index>
+        <index name="index5">
+            <element name="level_3"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="73b8fd6547eb2210cec2cd9fe16d437e" label="Performance Review" max_length="40" name="x_594089_employe_0_performance_review" type="collection">
+        <element choice="1" label="Review Period" max_length="40" name="review_period" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Q3" sequence="2" value="Q3"/>
+                <element inactive_on_update="false" label="Q4" sequence="3" value="Q4"/>
+                <element inactive_on_update="false" label="Q1" sequence="0" value="Q1"/>
+                <element inactive_on_update="false" label="Q2" sequence="1" value="Q2"/>
+            </choice>
+        </element>
+        <element label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+                <element inactive_on_update="false" label="Not Started" sequence="0" value="not_started"/>
+                <element inactive_on_update="false" label="In Progress" sequence="1" value="in_progress"/>
+            </choice>
+        </element>
+        <element choice="1" default="1" label="Manager Score" max_length="40" name="manager_score" type="string">
+            <choice>
+                <element inactive_on_update="false" label="4" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="5" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="2" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="1" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="3" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element label="Rating" max_length="40" name="rating" read_only="true" type="integer"/>
+        <element label="Final Score" max_length="40" name="final_score" type="integer"/>
+        <element label="Pending task" max_length="400" name="pending_task" type="string"/>
+        <element label="Employee" max_length="32" name="employee" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <element label="Assigned Task" mandatory="true" max_length="400" name="assigne_task" type="string"/>
+        <element label="Completed Task" mandatory="true" max_length="400" name="completed_task" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="3" default="1" label="Self Review" max_length="240" name="self_review" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="5" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="1" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="2" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="3" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="4" sequence="3" value="4"/>
+            </choice>
+        </element>
+        <element label="Manager Review" max_length="400" name="manager_review" type="string"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

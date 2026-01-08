@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	c.clockIn = function () {
+    c.data.action = 'clock_in';
+    c.server.update().then(function (response) {
+			setTimeout(function() {
+        window.location.reload();
+      }, 3000);
+    });
+  };
+  c.clockOut = function () {
+    c.data.action = 'clock_out';
+    c.server.update().then(function (response) {
+			setTimeout(function() {
+        window.location.reload();
+      }, 3000);
+    });
+  };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>mark_attendance</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Mark Attendance</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.ok = true;
+  data.message = '';
+  data.loading = false;
+ 
+  var ATTENDANCE_TABLE = 'x_594089_employe_0_attendance';
+	var EMPLOYEE_TABLE = 'x_594089_employe_0_hr_employee';
+  // Get the current user's username from the sys_user table
+  var userName = gs.getUserName();
+	gs.info('userName'+ userName);
+	var email = gs.getUser().getEmail();
+	gs.info('email'+ email);
+  var employeeSysId = null;
+ 
+	//First, find the employee record associated with the current user's username
+  var grEmployee = new GlideRecord(EMPLOYEE_TABLE);
+  grEmployee.addQuery('number', userName); 
+	grEmployee.addQuery('email', email); 
+  grEmployee.query();
+  if (grEmployee.next()) {
+    employeeSysId = grEmployee.sys_id;
+		gs.info('employeeSysId'+ employeeSysId)
+  }
+	
+  // helper: get (or create) today's attendance record
+  function getTodaysRecord(empId) {
+		if (!empId) {
+      return null;
+    }
+    //var today = new GlideDateTime(); // date-only in instance TZ
+		//today.setDisplayValue(today.nowDate() + ' 00:05:00');
+		var today1 = new GlideDateTime();
+		//gs.info('today'+ today1)
+		var datePart = today1.getLocalDate().getValue(); // yyyy-MM-dd
+		// Append custom time to the date
+		var today = new GlideDateTime(datePart + '03:31:26');
+		gs.info('today'+ today)
+		gs.info('getTodaysRecord empId '+ empId);
+    var gr = new GlideRecord(ATTENDANCE_TABLE);
+    gr.addQuery('employee', empId);
+   // gr.addQuery('sys_created_on', today); // works if u_date is Date type
+    gr.query();
+    if (gr.next()) return gr;
+    return null;
+  }
+ 
+  // on initial load, fetch today's record to show in UI
+  var currentRec = getTodaysRecord(employeeSysId);
+	//gs.info('currentRec1' + currentRec);
+	
+	// If no employee record is found, stop here and show an error
+  if (!employeeSysId) {
+    data.ok = false;
+    data.message = 'No employee record found for this user. Please contact support.';
+    return;
+  }
+ 
+  // handle button actions
+  if (input && input.action) {
+    data.loading = true;
+ 
+    if (input.action === 'clock_in') {
+			gs.info('input.action' + input.action);
+		gs.info('currentRec in if ' + currentRec);
+      if (currentRec && currentRec.in_time) {
+        data.ok = false;
+        data.message = 'You have already clocked in.';
+      } else {
+        var nowIn = new GlideDateTime();
+				gs.info('currentRec' + currentRec);
+ 				// This is the simplified logic: it now assumes the record exists and updates it directly.
+        if (currentRec) {
+          currentRec.in_time = nowIn;
+          currentRec.status = 'present';
+          currentRec.update();
+          data.ok = true;
+          data.message = 'Clocked in at ' + nowIn.getDisplayValue();
+        } else {
+          data.ok = false;
+          data.message = 'No pending record found for today. Please contact support.';
+        }
+      }
+    }
+    // Logic for the 'clock_out' action
+    if (input.action === 'clock_out') {
+      if (!currentRec || !currentRec.in_time) {
+        data.ok = false;
+        data.message = 'You have not clocked in today.';
+      } else if (currentRec.out_time) {
+        data.ok = false;
+        data.message = 'You have already clocked out.';
+      } else {
+        var nowOut = new GlideDateTime();
+        currentRec.out_time = nowOut;
+        currentRec.status = 'Completed';
+ 
+       // if (currentRec.isValidField('duration_minutes') && currentRec.in_time) {
+         // var diffMS = GlideDateTime.subtract(nowOut, currentRec.in_time).getNumericValue();
+        //  var mins = Math.round(diffMS / 60000);
+        //  currentRec.duration_minutes = mins;
+        //}
+ 
+        currentRec.update();
+ 
+        data.ok = true;
+        data.message = 'Clocked out at ' + nowOut.getDisplayValue();
+      }
+    }
+  }
+ 
+  // Refresh the data object with the latest record information for the UI
+  currentRec = getTodaysRecord(employeeSysId);
+  if (currentRec) {
+    data.record = {
+      sys_id: currentRec.getUniqueValue(),
+      date: currentRec.login_date ? (currentRec.login_date.getDisplayValue ? currentRec.login_date.getDisplayValue() : currentRec.login_date + '') : '',
+      time_in: currentRec.in_time ? currentRec.in_time.getDisplayValue() : '',
+      time_out: currentRec.out_time ? currentRec.out_time.getDisplayValue() : '',
+      status: currentRec.status + ''
+    };
+  }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 05:59:15</sys_created_on>
+        <sys_id>4deb704a47efa210cec2cd9fe16d4326</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>Mark Attendance</sys_name>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>sp_widget_4deb704a47efa210cec2cd9fe16d4326</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-28 06:27:58</sys_updated_on>
+        <template><![CDATA[<div class="card p-3" style="background-color: #FFFFFF85; border: 1px solid grey; padding: 2em; border-radius: 10px;">
+<h3 class="h3 mb-3">Today’s Attendance</h3>
+<div ng-if="!data.record">
+<p class="text-muted">You haven’t clocked in today.</p>
+</div>
+<div ng-if="data.record">
+<div class="mb-2" style="font-size: 1.25em;">Date: <strong>{{data.record.date || '-'}}</strong></div>
+<div class="mb-2" style="font-size: 1.25em;">Time In: <strong>{{data.record.time_in || '-'}}</strong></div>
+<div class="mb-2" style="font-size: 1.25em;">Time Out: <strong>{{data.record.time_out || '-'}}</strong></div>
+<div class="mb-3"  style="font-size: 1.25em;">Status: <span>{{data.record.status}}</span></div>
+</div>
+<div class="d-flex gap-2">
+<button class="btn btn-primary"
+            ng-click="c.clockIn()"
+            ng-disabled="data.loading || (data.record && data.record.time_in)">
+      Clock In
+</button>
+<button class="btn btn-danger"
+            ng-click="c.clockOut()"
+            ng-disabled="data.loading || !data.record || data.record.time_out">
+      Clock Out
+</button>
+</div>
+<div ng-if="data.message" class="mt-3 alert"
+       ng-class="{'alert-success': data.ok, 'alert-danger': !data.ok}">
+    {{data.message}}
+</div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>4deb704a47efa210cec2cd9fe16d4326</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 05:59:16</sys_created_on>
+        <sys_id>85eb704a47efa210cec2cd9fe16d432a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 05:59:16</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

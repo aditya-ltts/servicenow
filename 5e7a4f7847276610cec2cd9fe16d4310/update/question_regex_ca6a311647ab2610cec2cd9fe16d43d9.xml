@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_regex">
+    <question_regex action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>First Name</name>
+        <regex>^[a-zA-Z]+$</regex>
+        <regex_flag/>
+        <sys_class_name>question_regex</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-26 05:11:13</sys_created_on>
+        <sys_id>ca6a311647ab2610cec2cd9fe16d43d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>First Name</sys_name>
+        <sys_package display_value="Employee Portal" source="x_594089_employe_0">5e7a4f7847276610cec2cd9fe16d4310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Portal">5e7a4f7847276610cec2cd9fe16d4310</sys_scope>
+        <sys_update_name>question_regex_ca6a311647ab2610cec2cd9fe16d43d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 05:11:13</sys_updated_on>
+        <validation_message>Input is not correct</validation_message>
+    </question_regex>
+    <sys_translated_text action="delete_multiple" query="documentkey=ca6a311647ab2610cec2cd9fe16d43d9"/>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="42babd2947eb2210cec2cd9fe16d43a0" label="Employee Document" max_length="40" name="x_594089_employe_0_employee_document" type="collection">
+        <element label="Document Type" max_length="40" name="document_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Resume" sequence="0" value="resume"/>
+                <element inactive_on_update="false" label="Offer Letter" sequence="1" value="offer_letter"/>
+                <element inactive_on_update="false" label="ID Proof" sequence="2" value="id_proof"/>
+                <element inactive_on_update="false" label="Appraisal" sequence="3" value="appraisal"/>
+            </choice>
+        </element>
+        <element label="File Name" max_length="40" name="file_name" type="string"/>
+        <element label="Employee" max_length="32" name="employee" reference="x_594089_employe_0_hr_employee" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Attachment" max_length="40" name="attachment" type="file_attachment"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>
